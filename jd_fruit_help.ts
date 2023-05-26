@@ -70,7 +70,7 @@ class Jd_fruit_help extends JDHelloWorld {
         this.user = user
         this.user.UserAgent = `jdapp;iPhone;10.2.0;${Math.ceil(Math.random() * 4 + 10)}.${Math.ceil(Math.random() * 4)};${this.randPhoneId()};network/4g;model/iPhone11,8;addressid/1188016812;appBuild/167724;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS ${this.getIosVer()} like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1`
         let myCode: string = this.code2user[this.user.UserName] ?? ""
-        let shareCodePool: string[] = await this.getShareCodePool('farm', 50)
+        let shareCodePool: string[] = []
         let shareCode: string[] = [...this.shareCodeSelf, ...shareCodePool]
         this.o2s(shareCode, '助力顺序')
         for (let code of shareCode) {
