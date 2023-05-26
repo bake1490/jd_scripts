@@ -305,7 +305,7 @@ class Jd_fruit extends JDHelloWorld {
       this.h5stTool = new H5ST('8a2af', this.user.UserAgent, this.fp)
       await this.h5stTool.__genAlgo()
 
-      let shareCodePool: string[] = await this.getShareCodePool('farm', 50)
+      let shareCodePool: string[] = []
       let shareCode: string[] = [...this.shareCodeSelf, ...shareCodePool]
 
       for (let code of shareCode) {
